@@ -21,11 +21,20 @@ public class UserDaoOracleImpl extends HibernateDaoSupport implements UserDao {
         return users.get(0);
     }
 
+
+    public User getUserByAuthtoken(String authtoken){
+        List<UserSession> sessions = (List<UserSession>) getHibernateTemplate().find("from UserSession where authtoken = ?", authtoken);
+        return sessions.get(0).getUser();
+    }
+
+
     @Override
     @Transactional
     public void addSession(UserSession session) {
         getHibernateTemplate().save(session);
     }
+
+
 
     public void login(User user) {
 
@@ -35,5 +44,13 @@ public class UserDaoOracleImpl extends HibernateDaoSupport implements UserDao {
     public void logout(String authtoken) {
         UserSession session = getHibernateTemplate().load(UserSession.class, authtoken);
         getHibernateTemplate().delete(session);
+    }
+
+    @Override
+    public boolean isLoggedIn(String authtoken) {
+        List<UserSession> loggedInUsers = (List<UserSession>) getHibernateTemplate().find("from UserSession where authtoken = ?", authtoken);
+        if (loggedInUsers.size()>0)
+            return true;
+        return false;
     }
 }

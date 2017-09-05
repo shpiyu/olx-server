@@ -23,4 +23,9 @@
     </bean>
     <bean id="userService" class="app.service.UserServiceImpl"/>
     <bean id="userController" class="app.controller.UserController"/>
+    <bean id="advertisementController" class="app.controller.AdvertisementController"/>
+    <bean id="advertisementService" class="app.service.AdvertisementServiceImpl"/>
+    <bean id="advertisementDao" class="app.dao.AdvertisementDaoOracleImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
 </beans>

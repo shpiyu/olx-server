@@ -13,6 +13,9 @@
 
 		<mapping class="app.entity.User"/>
 		<mapping class="app.entity.UserSession"/>
+		<mapping class="app.entity.Category"/>
+		<mapping class="app.entity.AdvertisementAction"/>
+		<mapping class="app.entity.Advertisement"/>
 
 </session-factory>
 </hibernate-configuration>

@@ -1,6 +1,9 @@
 package app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -21,6 +24,12 @@ public class User {
     private String email;
     @Column(name = "phone")
     private long phone;
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, mappedBy = "postedBy")
+    private Set<Advertisement> advertisements;
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, mappedBy = "user")
+    private Set<UserSession> sessions;
 
     public User() {
     }
@@ -90,5 +99,19 @@ public class User {
         this.phone = phone;
     }
 
+    public Set<Advertisement> getAdvertisements() {
+        return advertisements;
+    }
 
+    public void setAdvertisements(Set<Advertisement> advertisements) {
+        this.advertisements = advertisements;
+    }
+
+    public Set<UserSession> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(Set<UserSession> sessions) {
+        this.sessions = sessions;
+    }
 }

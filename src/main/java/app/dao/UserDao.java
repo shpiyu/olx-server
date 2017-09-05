@@ -12,4 +12,6 @@ public interface UserDao {
     User getUserByUsername(String username);
 
     void addSession(UserSession session);
+    User getUserByAuthtoken(String authtoken);
+    boolean isLoggedIn(String authtoken);
 }

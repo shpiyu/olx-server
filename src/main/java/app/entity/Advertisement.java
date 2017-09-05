@@ -1,25 +1,41 @@
 package app.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "advertisment")
 public class Advertisement {
-    private String title;
-    private String name;
+    @Id
+    @GeneratedValue
+    @Column(name = "product_id")
+    private int id;
 
-    private String category;
+    @Column(name = "title")
+    private String title;
+    @Column(name = "name")
+    private String name;
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "category")
+    private Category category;
+    @Column(name = "description")
     private String description;
+
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name="username")
+    private User postedBy;
+
+    @Column(name = "post_date")
+    private long postedDate;
 
     public Advertisement() {
     }
 
-    public Advertisement(String title, String name, String category, String description) {
-        this.title = title;
-        this.name = name;
-        this.category = category;
-        this.description = description;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -38,11 +54,11 @@ public class Advertisement {
         this.name = name;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
@@ -54,13 +70,19 @@ public class Advertisement {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Advertisement{" +
-                "title='" + title + '\'' +
-                ", name='" + name + '\'' +
-                ", category=" + category +
-                ", description='" + description + '\'' +
-                '}';
+    public User getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(User postedBy) {
+        this.postedBy = postedBy;
+    }
+
+    public long getPostedDate() {
+        return postedDate;
+    }
+
+    public void setPostedDate(long postedDate) {
+        this.postedDate = postedDate;
     }
 }

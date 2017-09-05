@@ -1,5 +1,7 @@
 package app.entity;
 
+import org.omg.CORBA.PERSIST_STORE;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,9 +9,10 @@ import javax.persistence.*;
 public class UserSession {
 
 
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "username")
+    private User user;
 
-    @Column(name = "username")
-    private String userName;
     @Id
     @Column(name = "authtoken", unique = true)
     private String authtoken;
@@ -17,22 +20,26 @@ public class UserSession {
     @Column(name = "time")
     private long time;
 
+
+
     public UserSession() {
     }
 
-    public UserSession(String userName, String authtoken, long time) {
-        this.userName = userName;
+
+
+    public UserSession(User user, String authtoken, long time) {
+        this.user = user;
         this.authtoken = authtoken;
         this.time = time;
     }
 
 
-    public String getUserName() {
-        return userName;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser(User userName) {
+        this.user = user;
     }
 
     public String getAuthtoken() {

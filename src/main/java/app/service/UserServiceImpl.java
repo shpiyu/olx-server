@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
         User storedUser = userDao.getUserByUsername(username);
         if (password.equals(storedUser.getPassword())){
             String authtoken = getNewAuthtoken();
-            UserSession session = new UserSession(username,authtoken,System.currentTimeMillis());
+            UserSession session = new UserSession(storedUser,authtoken,System.currentTimeMillis());
             userDao.addSession(session);
             return authtoken;
         } else {
