@@ -87,4 +87,10 @@ public class UserController {
     public void logout(@RequestHeader(name = "auth-token")String authtoken){
         userService.logout(authtoken);
     }
+
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public @ResponseBody User getUserInfo(@RequestParam(name = "userId")int userId, @RequestHeader(name = "auth-token")String authtoken){
+        return userService.getUserInfo(userId, authtoken);
+    }
 }

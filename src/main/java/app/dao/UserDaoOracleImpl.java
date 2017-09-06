@@ -53,4 +53,9 @@ public class UserDaoOracleImpl extends HibernateDaoSupport implements UserDao {
             return true;
         return false;
     }
+
+    @Override
+    public User getUserInfo(int userId) {
+        return getHibernateTemplate().get(User.class, userId);
+    }
 }

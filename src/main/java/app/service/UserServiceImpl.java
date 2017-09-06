@@ -38,4 +38,12 @@ public class UserServiceImpl implements UserService {
     public void logout(String authtoken) {
         userDao.logout(authtoken);
     }
+
+    @Override
+    public User getUserInfo(int userId, String authtoken) {
+        if (userDao.isLoggedIn(authtoken))
+            return userDao.getUserInfo(userId);
+        else
+            return null;
+    }
 }
