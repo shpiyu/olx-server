@@ -54,4 +54,16 @@ public class AdvertisementDaoOracleImpl extends HibernateDaoSupport implements A
         storedAd.setTitle(advertisement.getTitle());
         getHibernateTemplate().update(storedAd);
     }
+
+    @Override
+    public Advertisement getSpecificAdOfUser(int id) {
+        return getHibernateTemplate().get(Advertisement.class, id);
+    }
+
+    @Override
+    @Transactional
+    public void deleteAdvertisement(int id) {
+        Advertisement storedAd = getHibernateTemplate().load(Advertisement.class,id);
+        getHibernateTemplate().delete(storedAd);
+    }
 }

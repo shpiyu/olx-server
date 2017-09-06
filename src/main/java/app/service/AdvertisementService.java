@@ -13,4 +13,8 @@ public interface AdvertisementService {
     List<Advertisement> getAllAdvertismentByUser(String authtoken);
 
     void updateAdvertisment(Advertisement advertisement, String authtoken);
+
+    Advertisement getSpecificAdOfUser(int id, String authtoken);
+
+    void deleteAdvertisement(int id, String authtoken);
 }

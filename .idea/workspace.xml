@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java" afterPath="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDaoOracleImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDaoOracleImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Advertisement.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Advertisement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/AdvertisementService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/AdvertisementService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/AdvertisementServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/AdvertisementServiceImpl.java" />
     </list>
@@ -21,12 +20,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdvertisementController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="515">
+              <caret line="86" column="56" lean-forward="false" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#registerUser#0;class#UserController#0" expanded="false" />
+                <element signature="e#1888#2064#0" expanded="false" />
+                <element signature="method#login#0;class#UserController#0" expanded="false" />
+                <element signature="e#2887#2888#0" expanded="true" />
+                <element signature="e#2932#2933#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,12 +78,12 @@
         <option value="$PROJECT_DIR$/src/main/java/app/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.3.RELEASE/spring-aop-4.2.3.RELEASE.jar!/org/springframework/aop/support/AopUtils.class" />
+        <option value="$PROJECT_DIR$/src/main/java/app/entity/Advertisement.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/AdvertisementService.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/service/AdvertisementServiceImpl.java" />
-        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.3.RELEASE/spring-aop-4.2.3.RELEASE.jar!/org/springframework/aop/support/AopUtils.class" />
-        <option value="$PROJECT_DIR$/src/main/java/app/entity/Advertisement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDaoOracleImpl.java" />
       </list>
     </option>
@@ -340,7 +346,7 @@
       <workItem from="1504504869888" duration="16425000" />
       <workItem from="1504583688190" duration="1506000" />
       <workItem from="1504585278929" duration="14171000" />
-      <workItem from="1504671016327" duration="4113000" />
+      <workItem from="1504671016327" duration="5784000" />
     </task>
     <task id="LOCAL-00001" summary="ad post and other small functionalities">
       <created>1504611659511</created>
@@ -349,11 +355,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504611659511</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update post done">
+      <created>1504677927943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504677927943</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36215000" />
+    <option name="totallyTimeSpent" value="37886000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,7 +418,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ad post and other small functionalities" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad post and other small functionalities" />
+    <MESSAGE value="update post done" />
+    <option name="LAST_COMMIT_MESSAGE" value="update post done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,6 +458,8 @@
           <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -554,6 +570,8 @@
           <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,8 +614,8 @@
             <element signature="method#registerUser#0;class#UserController#0" expanded="false" />
             <element signature="e#1888#2064#0" expanded="false" />
             <element signature="method#login#0;class#UserController#0" expanded="false" />
-            <element signature="e#2887#2888#0" expanded="false" />
-            <element signature="e#2932#2933#0" expanded="false" />
+            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#2932#2933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -674,21 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="86" column="56" lean-forward="false" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#registerUser#0;class#UserController#0" expanded="false" />
-            <element signature="e#1888#2064#0" expanded="false" />
-            <element signature="method#login#0;class#UserController#0" expanded="false" />
-            <element signature="e#2887#2888#0" expanded="false" />
-            <element signature="e#2932#2933#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -754,32 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/AdvertisementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/AdvertisementServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.2.3.RELEASE/spring-tx-4.2.3.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -822,21 +799,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDaoOracleImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        <state relative-caret-position="464">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/AdvertisementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/service/AdvertisementServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="68" column="53" lean-forward="true" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/AdvertisementController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/dao/AdvertisementDaoOracleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="86" column="56" lean-forward="false" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#registerUser#0;class#UserController#0" expanded="false" />
+            <element signature="e#1888#2064#0" expanded="false" />
+            <element signature="method#login#0;class#UserController#0" expanded="false" />
+            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#2932#2933#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

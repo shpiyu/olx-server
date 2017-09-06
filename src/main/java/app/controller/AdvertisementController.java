@@ -40,4 +40,14 @@ public class AdvertisementController {
     public void updateAdvertisement(@RequestBody Advertisement advertisement, @RequestHeader(name = "auth-token")String authtoken){
         advertisementService.updateAdvertisment(advertisement, authtoken);
     }
+
+    @RequestMapping(value = "/post", method = RequestMethod.GET)
+    public @ResponseBody Advertisement getSpecificAdOfUser(@RequestParam(name = "postId") int id, @RequestHeader(name = "auth-token")String authtoken){
+        return advertisementService.getSpecificAdOfUser(id,authtoken);
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.DELETE)
+    public void deleteAdvertisment(@RequestParam(name = "postId") int id, @RequestHeader(name = "auth-token")String authtoken){
+        advertisementService.deleteAdvertisement(id,authtoken);
+    }
 }

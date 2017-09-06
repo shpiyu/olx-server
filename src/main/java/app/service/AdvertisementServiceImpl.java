@@ -54,4 +54,19 @@ public class AdvertisementServiceImpl implements AdvertisementService {
         if (userDao.isLoggedIn(authtoken))
             advertisementDao.updateAdvertisment(advertisement);
     }
+
+    @Override
+    public Advertisement getSpecificAdOfUser(int id, String authtoken) {
+        if(userDao.isLoggedIn(authtoken)){
+            return advertisementDao.getSpecificAdOfUser(id);
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteAdvertisement(int id, String authtoken) {
+        if (userDao.isLoggedIn(authtoken)){
+            advertisementDao.deleteAdvertisement(id);
+        }
+    }
 }
