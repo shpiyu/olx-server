@@ -35,4 +35,9 @@ public class AdvertisementController {
     public @ResponseBody List<Advertisement> getAllAdvertismentByUser(@RequestHeader(name = "auth-token")String authtoken){
         return advertisementService.getAllAdvertismentByUser(authtoken);
     }
+
+    @RequestMapping(value = "/postAd", method = RequestMethod.PUT)
+    public void updateAdvertisement(@RequestBody Advertisement advertisement, @RequestHeader(name = "auth-token")String authtoken){
+        advertisementService.updateAdvertisment(advertisement, authtoken);
+    }
 }

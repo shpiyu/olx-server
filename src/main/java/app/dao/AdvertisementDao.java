@@ -14,4 +14,6 @@ public interface AdvertisementDao {
     void postAd(Advertisement advertisement);
 
     List<Advertisement> getAllAdvertismentByUser(User user);
+
+    void updateAdvertisment(Advertisement advertisement);
 }

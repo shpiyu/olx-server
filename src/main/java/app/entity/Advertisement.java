@@ -85,4 +85,17 @@ public class Advertisement {
     public void setPostedDate(long postedDate) {
         this.postedDate = postedDate;
     }
+
+    @Override
+    public String toString() {
+        return "Advertisement{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", name='" + name + '\'' +
+                ", category=" + category +
+                ", description='" + description + '\'' +
+                ", postedBy=" + postedBy +
+                ", postedDate=" + postedDate +
+                '}';
+    }
 }

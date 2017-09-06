@@ -42,4 +42,16 @@ public class AdvertisementDaoOracleImpl extends HibernateDaoSupport implements A
     public List<Advertisement> getAllAdvertismentByUser(User user) {
         return (List<Advertisement>) getHibernateTemplate().find("from Advertisement where postedBy = ?", user);
     }
+
+    @Override
+    @Transactional
+    public void updateAdvertisment(Advertisement advertisement) {
+        Advertisement storedAd = getHibernateTemplate().load(Advertisement.class,advertisement.getId());
+        storedAd.setName(advertisement.getName());
+        Category storedCategory = getHibernateTemplate().get(Category.class, advertisement.getCategory().getCategoryName());
+        storedAd.setCategory(storedCategory);
+        storedAd.setDescription(advertisement.getDescription());
+        storedAd.setTitle(advertisement.getTitle());
+        getHibernateTemplate().update(storedAd);
+    }
 }

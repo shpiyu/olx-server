@@ -48,4 +48,10 @@ public class AdvertisementServiceImpl implements AdvertisementService {
         User user = userDao.getUserByAuthtoken(authtoken);
         return advertisementDao.getAllAdvertismentByUser(user);
     }
+
+    @Override
+    public void updateAdvertisment(Advertisement advertisement, String authtoken) {
+        if (userDao.isLoggedIn(authtoken))
+            advertisementDao.updateAdvertisment(advertisement);
+    }
 }

@@ -11,4 +11,6 @@ public interface AdvertisementService {
     void postAd(Advertisement advertisement, String authtoken);
 
     List<Advertisement> getAllAdvertismentByUser(String authtoken);
+
+    void updateAdvertisment(Advertisement advertisement, String authtoken);
 }
